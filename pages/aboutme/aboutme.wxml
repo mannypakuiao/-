@@ -1,0 +1,19 @@
+<view class='cont'>
+  <view class='banner'>
+    <image src='{{img}}'></image>
+  </view>
+  <view class='title'>{{name}}</view>
+  <view class='content'>
+    <text decode="{{true}}">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{about}}
+    </text>
+  </view>
+</view>
+
+<view class='address'>
+  公司地址 : <text class='addr'>{{address}}</text>
+</view>
+
+<view class='address'>
+  公司电话 : <text class='addr' bindtap='phone'>{{phone}}</text>
+</view>

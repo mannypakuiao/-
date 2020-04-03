@@ -1,0 +1,19 @@
+<view class='tishi'>
+  如果您对优居房产有好的建议,请留言(以下均为必填内容)
+</view>
+
+<form bindsubmit='formSubmit'>
+  <view class='liuyan'>
+    <textarea bindinput='bindTextAreaChange' placeholder="如果对我们有好的建议,请留言" placeholder-style='font-size:30rpx;'></textarea>
+  </view>
+
+  <view class='inpt'>
+    <input placeholder='请填写手机号' placeholder-style='font-size:30rpx;' name='phone' type="digit"></input>
+  </view>
+
+  <view class='inpt'>
+    <input placeholder='请填写姓名' placeholder-style='font-size:30rpx;' name='name' type="digit"></input>
+  </view>
+
+  <button form-type='submit'>提交评论</button>
+</form>

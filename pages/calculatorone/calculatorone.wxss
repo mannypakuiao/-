@@ -1,0 +1,106 @@
+.weizhi{
+  width: 13%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.weizhi image{
+  width: 36rpx;
+  height: 40rpx;
+}
+
+.title{
+  width: 60%;
+  text-align: center;
+  margin: 112rpx auto;
+  font-weight: 800;
+  font-size: 45rpx;
+}
+
+/* 表单 */
+.forms{
+  margin: 20rpx;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(226, 226, 226);
+  border-left: 1px solid rgb(226, 226, 226);
+  border-right: 1px solid rgb(226, 226, 226);
+}
+.lab{
+  color: black;
+  font-size: 30rpx;
+  line-height: 78rpx;
+}
+.inpt{
+  position: relative;
+  height: 78rpx;
+  color: rgb(88, 88, 88);
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+.pcla{
+  font-size: 30rpx;
+  line-height: 78rpx;
+}
+.inpt input{
+  margin-left: 7%;
+  height: 78rpx;
+}
+.inpt image{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -25rpx;
+  width: 67rpx;
+  height: 50rpx;
+}
+.rig{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  right: 0;
+  top: 50%;
+  margin-top: -25rpx;
+}
+.pi{
+  margin-left: 7%;
+  line-height: 78rpx;
+}
+/* 按钮 */
+.gujia{
+  margin: 20rpx;
+  border-radius: 100rpx;
+  background: rgb(88, 137, 241);
+  color: #fff;
+  margin-top: 85rpx;
+
+}
+
+/* 价格 */
+.result{
+  margin: 20rpx;
+  padding: 20rpx;
+  margin-top: 15%;
+  background: #fff;
+  box-shadow: 8rpx 8rpx 10rpx #c5c5c5;
+  height: 140rpx;
+}
+.xiaoqu{
+  display: flex;
+  justify-content: flex-start;
+}
+.releft{
+  font-size: 36rpx;
+}
+.reright{
+  font-size: 36rpx;
+}
+.money{
+  margin-top: 5%;
+  font-size: 50rpx;
+  color: #f58927;
+}
+.picker{
+  width: 400rpx;
+}

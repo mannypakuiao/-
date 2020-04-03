@@ -1,0 +1,224 @@
+/* banner */
+.swiper-item{
+  height: 482rpx;
+}
+.bannerimg image{
+  width: 100%;
+  height: 482rpx;
+}
+
+/* 标题 */
+.titieCont{
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-top: 20px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around
+}
+.title{
+  float: left;
+  font-size: 42rpx;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.guanzhu{
+  border: 1px solid rgb(189, 189, 189);
+  float: right;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 31rpx;
+  height: 50rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  line-height: 50rpx;
+  margin-top: 1%;
+  width: 150rpx;
+}
+.gzactive{
+  background: rgb(58, 134, 233);
+  color: #fff;
+}
+
+/* 大概详情 */
+.price{
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+.detail{
+  font-size: 25px;
+  color: rgb(255, 169, 10);
+}
+.co{
+  color: rgb(189, 189, 189);
+  font-size: 26rpx;
+  text-align: center;
+}
+
+/* 具体详情 */
+.xiangqing{
+  padding: 0px 20rpx 50rpx 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+.xiangqingLi{
+  display: inline-block;
+  width: 50%;
+  margin-top: 30rpx;
+  font-size: 35rpx;
+}
+.xqtitle{
+  display: inline-block;
+  color: rgb(189, 189, 189);
+}
+/* 推荐经纪人 */
+.AgentDetail{
+  margin-left: 2%;
+}
+.Agent{
+  padding: 0px 20rpx 20rpx 20rpx;
+  box-sizing: border-box; 
+  margin-top: 40rpx;
+}
+.AgentCont{
+  margin-top: 40rpx;
+}
+.AgentTile{
+  font-weight: 800;
+}
+.AgentLi{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+.AgentLi image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.person{
+  font-size: 34rpx;
+  font-weight: 800;
+  margin-top: 3%;
+}
+.meto{
+  width: 340rpx;
+  font-size: 26rpx;
+  color: rgb(189, 189, 189);
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.zhanwei{
+  height: 20rpx;
+  background: rgb(212, 212, 212);
+}
+.dianhua{
+  position: relative;
+  margin-left: 18%;
+  width: 100rpx;
+  height: 100rpx;
+  background: rgb(230, 240, 245);
+  border-radius: 50%;
+}
+.lianxi{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40rpx;
+  margin-left: -40rpx;
+}
+/* 地图 */
+.weizhi{
+  margin: 20rpx;
+}
+.weititle{
+  font-weight: 800;
+  margin-bottom: 40rpx;
+}
+/* 房源介绍 */
+.jss{
+  background: #fff;
+  padding: 20rpx;
+  overflow: hidden;
+}
+.jieshaoCont{
+  line-height: 50rpx;
+  margin-top: -20rpx;
+  font-size: 32rpx;
+  color: rgb(133, 131, 131);
+}
+
+/* 附近房源 */
+.fujn{
+  margin-top: 40rpx;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.fujinTitle{
+  height: 25px;
+  margin-left: 5px;
+}
+.nearby{
+  font-weight: 800;
+  float: left;
+}
+.fujinMore{
+  font-size: 26rpx;
+  float: right;
+  color: rgb(58, 134, 233);
+}
+.funjinList{
+  display: flex;
+  justify-content: flex-start;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  height: 424rpx;
+  margin-top: 10px;
+}
+.fujinli{
+  width: 50.333%;
+  display:inline-block;
+  overflow: hidden;
+  height: 420rpx;
+  margin-left:5px;
+}
+.fujinli image{
+  height: 276rpx;
+}
+.xiaoqu{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 30rpx;
+}
+.jieshao{
+  height: 20px;
+}
+.fujs{
+  color: rgb(189, 189, 189);
+  font-size: 13px;
+  float: left;
+}
+.fumoney{
+  font-weight: 800;
+  color: rgb(255, 169, 10);
+  font-size: 32rpx;
+  float: right;
+  margin-right: 8%;
+}
+.funjinScroll{
+  height: 165px;
+}

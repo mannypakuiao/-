@@ -1,0 +1,99 @@
+page{
+  height: 100%;
+}
+.information{
+  position: relative;
+  height: 23%;
+  background: rgb(51, 134, 241);
+  display: flex;
+  justify-content: flex-start;
+  color: #fff;
+}
+.touxiang{
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 7%;
+  position: absolute;
+  top: 50%;
+  margin-top: -75rpx;
+}
+/* 去掉button边框 */
+button::after{ border: none;}
+.phone1{
+  color: #fff;
+  width: 800rpx;
+  height: 88rpx;
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  margin-top: -69rpx;
+  margin-left: -200rpx;
+  text-align: left;
+  background: rgb(51, 134, 241);
+  border: 1px solid rgb(51, 134, 241);
+  font-size: 39rpx;
+}
+.phone2{
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgb(51, 134, 241);
+  border: 1px solid rgb(51, 134, 241);
+  font-size: 35rpx;
+}
+.phone3{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 57%;
+  margin-left: -200rpx;
+  text-align: left;
+}
+.touxiang image{
+  width: 163rpx;
+  height: 163rpx;
+  border-radius: 50%;
+}
+/* .informationCont{
+  position: absolute;
+  top: 50%;
+  margin-top: -56rpx;
+  margin-left: 30%;
+} */
+.zhanwei{
+  height: 20rpx;
+  background: rgb(236, 236, 236);
+}
+.chakan{
+  font-size: 26rpx;
+  margin-top: 5%;
+}
+
+/* 列表 */
+.forms{
+  padding: 20rpx;
+}
+.list{
+  position: relative;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  display: flex;
+  justify-content: flex-start;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  margin-top: 10rpx;
+  padding-left: 14rpx;
+}
+.list image{
+  position: absolute;
+  top: 50%;
+  margin-top: -25rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.inpt{
+  font-size: 35rpx;
+  margin-left: 12%;
+}

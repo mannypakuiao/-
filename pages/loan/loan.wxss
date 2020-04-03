@@ -1,0 +1,62 @@
+/**index.wxss**/
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.form-group.loan {
+  min-height: 180rpx;
+}
+
+.line {
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.loan {
+  flex-direction: row;
+}
+
+.loanItem {
+  width: 100%;
+}
+
+.totalLoan {
+  font-size: 50rpx;
+  margin-top: 10rpx;
+  padding-top: 30rpx;
+  height: 60rpx;
+}
+
+.double .totalLoan {
+  font-size: 32rpx;
+}
+
+.double .loanItem {
+  width: 46%;
+}
+
+.double .totalLoan {
+  padding-top: 20rpx;
+}
+
+.radioGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.actions {
+  position: fixed;
+  width: 90%;
+  padding: 0 6% 50rpx;
+}
+
+/* 修改 */
+.buts{
+  background: rgb(58, 134, 233)!important;
+}
+

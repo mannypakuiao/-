@@ -1,0 +1,10 @@
+<view class='title'>
+  合同查询
+</view>
+<form bindsubmit="formSubmit">
+  <view class='inpt'>
+    <input placeholder='请填写手机号或者合同编号' placeholder-style='font-size:30rpx;' name='number'></input>
+  </view>
+
+  <button bindtap='contractlist' form-type='submit'>点击查询</button>
+</form>

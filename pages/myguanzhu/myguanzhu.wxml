@@ -1,0 +1,30 @@
+<view class='likes'>
+  <view class='likeList'>
+    <scroll-view scroll-y='true'  class="yscroll_bar" bindscrolltolower="loadMore" style='height:{{windowHeight}}px'>
+      <block wx:for='{{list}}' wx:key='{{index}}'>
+        <view class='likeLi' bindtap='houseDetails' data-id='{{item.id}}'>
+          <view class='img'>   
+            <image src='{{url}}{{item.mainImg}}'></image>
+          </view>
+
+          <view class='likeCont'>
+            <view class='fangTitle'>{{item.houseName}} {{item.layout}} {{item.money}}万</view>
+            <view class='xiangxi'>
+              <view class='xiangxiLeft'>
+                {{item.housingArea}}㎡|{{item.layout}}|精装修|{{item.houseName}}
+              </view>
+
+              <view class='price'>
+                {{item.money}}万
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="guanzhu gzactive"  bindtap='quxiao' data-id='{{item.id}}'>
+          取消关注
+        </view>
+      </block>
+      <!-- <view class='shuju' style="{{shuju ? 'display:block':'display:none'}}">抱歉！您还没有关注相关房屋信息</view> -->
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<!-- <view class='weizhi'>
+  <image src='../../images/icons/weizhi.png'></image>
+  <view style='font-size:30rpx;'>开封</view>
+</view> -->
+
+<view class='title'>我们的房子值多少钱</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='forms'>
+    <view class='inpt'>
+      <label class='lab'>小区</label>
+      <input placeholder='请输入小区名字' placeholder-class='pcla'></input>
+    </view>
+
+    <view class='inpt'>
+      <label class='lab'>面积</label>
+      <input placeholder='请输入' placeholder-class='pcla' type='digit'></input>
+      <view class='rig'>㎡</view>
+    </view>
+
+    <view class='inpt'>
+      <label class='lab'>户型</label>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{           {multiIndex}}" range="{{multiArray}}" class='pi'>
+        <view class="picker">
+          {{multiArray[0][multiIndex[0]]}}/{{multiArray[1][multiIndex[1]]}}/{{multiArray[2][multiIndex[2]]}}
+        </view>
+      </picker>
+      <image src='../../images/jiantou.png'></image>
+    </view>
+  </view>
+
+  <button class='gujia' form-type='submit' bindtap='gujia'>查看估价</button>
+</form>
+
+<!-- 价格 -->
+<view class='result' style="{{xiaoqushow? 'display:block;':'display:none;'}}">
+  <view class='xiaoqu'>
+    <view class='releft'>晋开御景湾-</view>
+    <view class='reright'>3室1厅1卫</view>
+  </view>
+
+  <view class='money'>80万</view>
+</view>

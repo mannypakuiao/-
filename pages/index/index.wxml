@@ -1,0 +1,237 @@
+<!-- banner -->
+<view class='bannerSearch'>
+  <!-- 搜索框 -->
+  <form bindsubmit="searchSubmit">
+    <input placeholder='您想住在哪？' bindconfirm='searchSubmit' class='search' name='xiaoquming' placeholder-class="fontcss">
+      <i class='sousuo'>
+        <image src='../../images/icons/sousuo.png'></image>
+      </i>
+    </input>
+  </form>
+  <view class='weizhibtn'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="{{'name'}}">
+      <view>
+        <image src='../../images/icons/weizhi.png'></image>
+      </view>
+      <view class='aa'>{{citys}}</view>
+    </picker>
+  </view> 
+
+  <swiper indicator-dots="{{indicatorDots}}" class='swiper-item'
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+      <swiper-item class='bannerimg'> 
+        <image src="{{url}}{{item.img}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view style='width:100%;height:12rpx;background:#2cacd9;'></view>
+
+<!-- 公告 -->
+<view class='news'>
+  <view class='news_left'>
+    <text>公告</text>
+    <image src='../../images/icons/broadcast.png'/>
+  </view>
+
+  <view>
+    <swiper vertical='true' autoplay="true" interval='3000' circular='true' class='news_content'>
+      <block wx:for='{{gonggao}}' wx:key='{{index}}'> 
+        <swiper-item>
+            <text>{{item.title}}</text>
+        </swiper-item> 
+      </block>  
+    </swiper>
+  </view>
+  <view class='more' bindtap='gonggaolist' data-index='1'>更多</view>
+</view>
+
+<!-- 导航 -->
+<view class='nav'>
+  <view class='navList' bindtap='commonview' data-type='1' data-index='1'>
+    <view class='navimg'>
+      <image src='../../images/icons/ershoufang.jpg'></image>
+    </view>
+    <view class='navtitle'>二手房</view>
+  </view>
+
+  <view class='navList' bindtap='commonview' data-type='0' data-index='0'>
+    <view class='navimg'>
+      <image src='../../images/icons/xinfang.jpg'></image>
+    </view>
+    <view class='navtitle'>新房</view>
+  </view>
+
+  <view class='navList'  bindtap='commonview' data-type='2' data-index='2'>
+    <view class='navimg'>
+      <image src='../../images/icons/003.jpg'></image>
+    </view>
+    <view class='navtitle'>租房</view>
+  </view>
+
+  <view class='navList' bindtap='entrust'>
+    <view class='navimg'>
+      <image src='../../images/icons/004.jpg'></image>
+    </view>
+    <view class='navtitle'>委托出售</view>
+  </view>
+</view>
+
+<view class='nav'>
+  <view class='navList' bindtap='changfang' data-type='3'>
+    <view class='navimg'>
+      <image src='../../images/icons/005.jpg'></image>
+    </view>
+    <view class='navtitle'>商铺</view>
+  </view>
+
+  <view class='navList' bindtap='changfang' data-type='4'>
+    <view class='navimg'>
+      <image src='../../images/icons/006.jpg'></image>
+    </view>
+    <view class='navtitle'>写字楼</view>
+  </view>
+
+  <view class='navList' bindtap='changfang' data-type='5'>
+    <view class='navimg'>
+      <image src='../../images/icons/007.jpg'></image>
+    </view>
+    <view class='navtitle'>厂房仓库</view>
+  </view>
+
+  <view class='navList' bindtap='zixun'>
+    <view class='navimg'>
+      <image src='../../images/icons/008.jpg'></image>
+    </view>
+    <view class='navtitle'>房产资讯</view>
+  </view>  
+</view>
+
+<!-- 计算器 -->
+<!-- <view class='calculator'>
+  <view class='calLeft calcommon'>
+    <view class='jisuantitle'>房贷计算器</view>
+    <view class='jisuanqi'>房贷计算器用于计算用户在申请贷款的情况下，根据选择不同按揭贷款方式，分为等额本金和等额本息两种方式，每月月供、利息总额、还贷总额的差异清晰得知。
+    </view>
+    <button class='btn' bindtap='commonview' data-index='7'>立即提交</button>
+  </view>
+</view> -->
+                
+<!-- 附近房源 -->
+<view class='fujn'>
+  <view class='fujinTitle'>
+    <view class='nearby'>附近房源</view>
+    <view class='fujinMore' bindtap='commonview' data-index='9'>查看更多</view>
+  </view>
+
+  <view class='funjinList'>
+    <block wx:for='{{nearbyList}}' wx:key='{{key}}'>
+      <view class='fujinli' bindtap='houseDetails' data-id='{{item.id}}' data-type='{{item.type}}'>
+        <image src='{{url}}{{item.mainImg}}'></image>
+        <view class='xiaoqu'>{{item.title}}</view>
+          <view class='fujs'>{{item.layout}}</view>
+          <view class='fumoney' wx:if="{{item.type == 2}}">{{item.money}}元/月</view>
+          <view class='fumoney' wx:else>{{item.price}}元/㎡</view>
+        <view class='juli'>距我有:{{item.distance}}km</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 猜你喜欢 -->
+<view class='likes'>
+  <view class='likeTitle'>
+    <view class='likeLeft'>猜你喜欢</view>
+    <view class='type'>
+      <block wx:for='{{housetype}}' wx:key='{{index}}'>
+        <view class="typeli {{typeindex == index ? 'typeliactive':''}}" data-index='{{index}}' bindtap='housetype'>
+          {{item}}
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 二手房 -->
+  <view class='likeList' style="{{ershoushow ? 'display:block':'display:none'}}">
+    <block wx:for='{{buildings1}}' wx:key='{{index}}'>
+      <view class='likeLi' bindtap='houseDetails' data-id='{{item.id}}' data-type='{{item.type}}'>
+        <view class='img'>   
+          <image src='{{url}}{{item.mainImg}}'></image>
+        </view>
+
+        <view class='likeCont'>
+          <view class='fangTitle'>{{item.houseName}} {{item.layout}} {{item.orientation}}</view>
+          <view class='xiangxi'>
+            <view class='xiangxiLeft'>
+              {{item.layout}}|{{item.housingArea}}平米|{{item.houseName}}
+            </view>
+
+            <view class='price'>
+              {{item.price}}元/㎡
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <button class='findMore' bindtap='commonview' data-type='1' data-index='1'>查看更多二手房</button>
+  </view>
+  <!-- 租房 -->
+  <view class='likeList' style="{{zufangshow ? 'display:block':'display:none'}}">
+    <block wx:for='{{buildings2}}' wx:key='{{index}}'>
+      <view class='likeLi' bindtap='houseDetails' data-id='{{item.id}}' data-type='{{item.type}}'>
+        <view class='img'>   
+          <image src='{{url}}{{item.mainImg}}'></image>
+        </view>
+
+        <view class='likeCont'>
+          <view class='fangTitle'>{{item.houseName}} {{item.layout}} {{item.mode}}</view>
+          <view class='xiangxi'>
+            <view class='xiangxiLeft'>
+              {{item.layout}}|{{item.housingArea}}平米|{{item.houseName}}
+            </view>
+
+            <view class='price'>
+              {{item.money}}元/月
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <button class='findMore' bindtap='commonview' data-type='2' data-index='2'>查看更多租房</button>
+  </view>
+  <!-- 新房 -->
+  <view class='likeList' style="{{xinfangshow ? 'display:block':'display:none'}}">
+    <block wx:for='{{buildings0}}' wx:key='{{index}}'>
+      <view class='likeLi' bindtap='houseDetails' data-id='{{item.id}}' data-type='{{item.type}}'>
+        <view class='img'>   
+          <image src='{{url}}{{item.mainImg}}'></image>
+        </view>
+
+        <view class='likeCont'>
+          <view class='fangTitle'>{{item.houseName}} {{item.layout}} 精装修</view>
+          <view class='xiangxi'>
+            <view class='xiangxiLeft'>
+              {{item.layout}}|{{item.housingArea}}平米|{{item.houseName}}
+            </view>
+
+            <view class='price'>
+              {{item.price}}元/㎡
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <button class='findMore' bindtap='commonview' data-type='0' data-index='0'>查看更多新房</button>
+  </view>
+</view>
+
+<!-- 客服 -->
+<button open-type="contact" bindcontact="handleContact">
+  <view class='kefucont'> 
+    <view class='kefu'>
+      <image src='../../images/kefu.png'></image>
+      <view class='tis'>客服</view>
+    </view>
+  </view>
+</button>

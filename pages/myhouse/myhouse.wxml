@@ -1,0 +1,29 @@
+<view class='likes'>
+  <block wx:for='{{houseList}}' wx:key='{{index}}'>
+    <view class='likeList'>
+      <view class='likeLi' bindtap='houseDetails'>
+        <view class='img'>   
+          <image src='{{url}}{{item.mainImg}}'></image>
+        </view>
+
+        <view class='likeCont'>
+          <view class='fangTitle'>{{item.houseName}} {{item.layout}} {{item.money}}万</view>
+          <view class='xiangxi'>
+            <view class='xiangxiLeft'>
+              {{item.housingArea}}㎡|{{item.layout}}|{{item.orientation}}|{{item.houseName}}
+            </view>
+
+            <view class='price'>
+              {{item.money}}万
+            </view>
+
+            <view class='zhuangtai' wx:if="{{item.mode==0 && item.checkInOrNot==0}}">未出租</view>
+            <view class='zhuangtai' wx:elif="{{item.mode==0 && item.checkInOrNot==1}}">已出租</view>
+            <view class='zhuangtai' wx:elif="{{item.mode==1 && item.checkInOrNot==0}}">未出售</view>
+            <view class='zhuangtai' wx:elif="{{item.mode==1 && item.checkInOrNot==1}}">已出售</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

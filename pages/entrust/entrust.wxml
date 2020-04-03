@@ -1,0 +1,42 @@
+<view class='title'>我的委托任务</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='forms'>
+    <view class='inpt'>
+      <label class='lab'>小区名称</label>
+      <input placeholder='请输入小区名字' placeholder-class='pcla' name='xiaoquname'></input>
+    </view>
+
+    <view class='inpt'>
+      <label class='lab'>房屋地址</label>
+      <input placeholder='请输入房屋地址' placeholder-class='pcla' name='address'></input>
+    </view>
+
+    <view class='inpt'>
+      <label class='lab'>委托类型</label>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">  
+        <view class="picker">
+          <!-- <input placeholder='请选择' placeholder-class='pcla' name='weituotype' value='{{array[index]}}'></input> -->
+          <view class='xuanze' style="{{flags ? 'display:block' : 'display:none'}}">请选择</view>
+          <view class='aa'>{{array[index]}}</view>
+        </view>
+      </picker>
+    </view>
+
+    <view class='inpt'>
+      <label class='lab'>您的称呼</label>
+      <input placeholder='如何称呼您' placeholder-class='pcla' name='xingming'></input>
+    </view>
+
+    <view class='inpt'>
+      <label class='lab'>联系方式</label>
+      <input placeholder='请输入您的电话' placeholder-class='pcla' type='digit' name='dianhua'></input>
+    </view>
+  </view>
+
+  <button class='gujia' form-type='submit'>提交委托任务</button>
+</form>
+
+<view class='tishi'>
+  "温馨提示": 提交委托任务成功后，稍后会有工作人员与您联系，请保持电话畅通！
+</view>

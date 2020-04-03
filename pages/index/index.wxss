@@ -1,0 +1,398 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: rgb(238, 238, 238)
+}
+picker{
+  display: inline-block;
+  /* width: 33%; */
+}
+.aa{
+  position: absolute;
+  right: 0;
+  top: 5%;
+  display: inline-block;
+  font-size: 26rpx;
+}
+/* banner */
+.swiper-item{
+  height: 400rpx;
+}
+.bannerimg image{
+  width: 100%;
+  height: 400rpx;
+}
+
+/* 公告 */
+.news{
+  display: flex;
+  align-items: center;
+  padding: 12rpx 0;
+}
+
+.news_left{
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+}
+
+.news_left text{
+  color: #FFA200;
+  font-size: 28rpx;
+  width: 64rpx;
+  line-height: 30rpx;
+}
+
+.news_left image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.news_content{
+  width: 436rpx;
+  margin-left: 20rpx;
+  color: #000;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.more{
+  font-size: 28rpx;
+  color: #ffa200;
+  position: absolute;
+  right: 30rpx;
+}
+
+/* 导航 */
+.nav{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* height: 200rpx; */
+  overflow: hidden;
+}
+.navList{
+  width: 23%;
+  height: 190rpx;
+  float: left;
+  margin-left: 13rpx;
+}
+.navList image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.navimg{
+  margin: auto
+}
+.navList view{
+  text-align: center;
+  font-size: 26rpx;
+}
+
+/* 计算器 */
+.calculator{
+  width: 100%;
+  height: 321rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+}
+.jisuantitle{
+  width: 70%;
+  margin-left: 40rpx;
+}
+.jisuanqi{
+  font-size: 26rpx;
+  color: rgb(141, 140, 140);
+  font-weight: 400;
+  margin-top: 10rpx;
+  width: 80%;
+}
+.calcommon{
+  position: relative;
+  height: 253rpx;
+  border: 1px solid rgb(196, 196, 196);
+  width: 90%;
+  font-size: 35rpx;
+  font-weight: 800;
+  padding: 10rpx;
+  margin-top: 3%;
+}
+.calcommon view{
+  padding: 10rpx 0px 0px 22rpx;
+}
+.calcommon button{
+  border-radius: 0px;
+  width: 200rpx;
+  height: 58rpx;
+  margin: 15px 0px 0px 10px;
+  line-height: 58rpx;
+  background: rgb(88, 137, 241);
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+}
+.btn{
+  color: #fff;
+  font-size: 26rpx;
+}
+.calLeft{
+  overflow: hidden;
+  float: left;
+  margin-left: 4%;
+}
+.calRight{
+  margin-right: 4%;
+  float: right;
+}
+
+/* 附近房源 */
+.fujn{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.fujinTitle{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.nearby{
+  font-weight: 800;
+  float: left;
+  margin-left: 10rpx;
+}
+.fujinMore{
+  font-size: 26rpx;
+  float: right;
+  color: rgb(58, 134, 233);
+}
+.funjinList{
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  /* height: 165px; */
+  margin-top: 10px;
+}
+.fujinli{
+  width: 32.333%;
+  display:inline-block;
+  overflow: hidden;
+  /* height: 165px; */
+  margin-left:5px;
+}
+.fujinli image{
+  height: 100px;
+}
+.juli{
+  font-size: 24rpx;
+  color: rgb(189, 189, 189);
+}
+.xiaoqu{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  width: 245rpx;
+}
+.jieshao{
+  height: 80rpx;
+}
+.fujs{
+  color: rgb(189, 189, 189);
+  font-size: 13px;
+}
+.fumoney{
+  font-weight: 800;
+  color: rgb(255, 169, 10);
+  font-size: 13px;
+  
+  margin-right: 8%;
+}
+.funjinScroll{
+  height: 165px;
+}
+
+/* 猜你喜欢 */
+.likes{
+  padding: 20rpx;
+}
+.likeTitle{height: 25px;}
+.likeLeft{
+  font-weight: 800;
+  float: left;
+}
+.type{
+  font-size: 26rpx;
+  float: right;
+}
+.typeli{
+  margin-left: 36rpx;
+  display: inline-block;
+  line-height: 25px;
+}
+.likeList{
+  margin-top: 20rpx;
+}
+.likeLi{
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  margin-top: 40rpx;
+  padding-bottom: 46rpx;
+}
+.xiangxi{
+  margin-top: 8%;
+}
+.img{
+  width: 30%;
+  overflow: hidden;
+  height: 100px;
+  float: left;
+}
+.img image{
+  height: 100px;
+}
+.likeCont{
+  float: right;
+  width: 67%;
+  margin-left: 3%;
+}
+.fangTitle{
+  overflow: hidden;  
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 36rpx;
+}
+.xiangxiLeft{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 33rpx;
+  color: rgb(189, 189, 189);
+}
+.price{
+  color: rgb(255, 169, 10);
+  font-size: 36rpx;
+}
+.price span{
+  display: inline-block;
+  margin-left: 40rpx;
+  font-size: 2rpx;
+  color: rgb(189, 189, 189);
+}
+
+/* 查看更多 */
+.findMore{
+  height: 96rpx;
+  margin-top: 40rpx;
+  background: rgb(58, 134, 233);
+  color: #fff;
+  line-height: 96rpx;
+}
+
+/* 搜索 */
+.search{
+  font-size: 30rpx;
+  color: black;
+  border-radius: 5px;
+  width: 90%;
+  height: 70rpx;
+  margin: auto;
+  z-index: 99999999;
+  background: #fff;
+  position: absolute;
+  left: 5%;
+  top: 26rpx;
+  padding-left: 10%;
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+.fontcss{
+  font-size: 26rpx;
+}
+.sousuo{
+  position: absolute;
+  top: 12%;
+  left: 2%;
+  width: 52rpx;
+  height: 52rpx;
+}
+.sousuo image{
+  width: 52rpx;
+  height: 52rpx;
+}
+.weizhibtn{
+  padding-left: 10px;
+  color: black;
+  position: absolute;
+  right: 7%;
+  top: 3.6%;
+  height: 41rpx;
+  /* line-height: 40rpx; */
+  /* width: 28%; */
+  border-left: 1px solid rgb(189, 189, 189);
+  z-index: 99999999999999999999
+}
+.weizhibtn image{
+  width: 40rpx;
+  height: 50rpx;
+  margin-top: -3%;
+  margin-right: 104rpx;
+}
+.weizhibtn span{
+  font-weight: 800;
+  font-size: 30rpx;
+  position: absolute;
+  top: 4%;
+  right: 15%;
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.typeliactive{
+  color: rgb(88, 137, 241);
+}
+
+/* 客服 */
+.kefu{
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  border: 2px solid #f58927;
+  border-radius: 50%;
+  padding: 3rpx;
+  background: #fff;
+}
+.kefu image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50rpx;
+  margin-left: -35rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.tis{
+  position: absolute;
+  left: 40%;
+  margin-left: -25rpx;
+  width: 80rpx;
+  height: 50rpx;
+  font-size: 32rpx;
+  top: 54rpx;
+  color:  #f58927;
+}
+.kefucont{
+  position: fixed;
+  bottom: 28rpx;
+  right: 40rpx;
+}

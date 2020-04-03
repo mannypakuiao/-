@@ -1,0 +1,38 @@
+<view>
+
+  <view class='topExpress'>
+    <view class='topExpress-right'>
+      <view class='topExpress-right-top'>{{title}}</view>
+      <view class='topExpress-right-bottom'>合同编号 : {{code}}</view>
+    </view>
+  </view>
+
+  <view class='express-container'>
+    <block wx:for='{{list}}' wx:key='{{index}}'>
+      <view class="express-item" >
+          <!-- 左边 -->
+          <view class='express-left-date'>
+            <view class="express-statusing {{typeIndex==index ? 'active':''}}">{{item.addTime}}</view>
+          </view>
+
+          <!-- 中间 -->
+          <view class='express-middle-axis'>
+            <view class='online-top-closing'></view>
+            <view class="dot-closing {{typeIndex==index ? 'act':''}}"></view>
+            <view class="online-bottom {{typeIndex==index ? 'act':''}}"></view>
+          </view>
+
+          <!-- 右边子容器 -->
+          <view class='express-right'>
+            <view class="express-statusing {{typeIndex==index ? 'active':''}}"  wx:if="{{item.state == 0}}">验房中</view>
+            <view class="express-statusing {{typeIndex==index ? 'active':''}}"  wx:elif="{{item.state == 1}}">订房中</view>
+            <view class="express-statusing {{typeIndex==index ? 'active':''}}"  wx:elif="{{item.state == 2}}">已定房</view>
+            <view class="express-statusing {{typeIndex==index ? 'active':''}}"  wx:elif="{{item.state == 3}}">过户中</view>
+            <view class="express-statusing {{typeIndex==index ? 'active':''}}" wx:elif="{{item.state == 4}}">已过户</view>
+            <view class="express-statusing {{typeIndex==index ? 'active':''}}"  wx:elif="{{item.state == 5}}">已完成</view>
+          </view>
+      </view>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,21 @@
+.title{
+  width: 50%;
+  margin: auto;
+  font-weight: 800;
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 8%;
+}
+.date{
+  width: 50%;
+  font-size: 35rpx;
+  color: rgb(172, 172, 172);
+  margin: 20rpx auto;
+  text-align: center;
+}
+.content{
+  color: rgb(94, 94, 94);
+  text-align: center;
+  padding: 20rpx;
+  line-height: 66rpx;
+}

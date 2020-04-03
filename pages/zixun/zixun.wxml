@@ -1,0 +1,13 @@
+<scroll-view scroll-y='true'  class="yscroll_bar" bindscrolltolower="loadMore" style='height:{{windowHeight}}px'>
+  <block wx:for='{{list}}' wx:key="{{index}}" > 
+    <view class='news' bindtap='zixun' data-id='{{item.id}}'>
+      <view class='title'>
+        {{item.title}} 
+      </view>
+      <view class='date'>
+       {{item.addTime}} 
+      </view>
+    </view>
+  </block> 
+  <view class='bot'>没有数据</view>
+</scroll-view>

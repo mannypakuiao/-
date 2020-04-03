@@ -1,0 +1,15 @@
+<scroll-view scroll-y='true'  class="yscroll_bar" style='height:{{windowHeight}}px'>
+  <block wx:for='{{list}}' wx:key='{{index}}'>
+    <view class='news' bindtap='contractdetails' data-id='{{item.id}}' data-title='{{item.title}}' data-code='{{item.contractCoding}}'>
+      <view class='title'>{{item.title}}</view>
+      <view class='date'>{{item.updateTime}}</view>
+
+      <view class='ima' wx:if='{{item.state==0}}'>验房中</view>
+      <view class='ima' wx:elif='{{item.state==1}}'>订房中</view>
+      <view class='ima' wx:elif='{{item.state==2}}'>已定</view>
+      <view class='ima' wx:elif='{{item.state==3}}'>过户中</view>
+      <view class='ima' wx:elif ='{{item.state==4}}'>已过户</view>
+      <view class='ima' wx:else='{{item.state==5}}'>已完成</view>
+    </view>
+  </block>
+</scroll-view>

@@ -1,0 +1,147 @@
+<!-- banner -->
+<view class='bannerSearch'>
+  <swiper class='swiper-item' autoplay='true' indicator-dots="true"
+  interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+      <swiper-item class='bannerimg'> 
+        <image src="{{url}}{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 标题 -->
+<view class='titieCont'>
+  <view class='title'>{{buildings.title}}</view>
+  <view class="guanzhu {{hsaFollow == 1 ? 'gzactive':''}}" bindtap='guanzhu'>
+    {{guanzhu}}
+  </view>
+</view>
+
+<!-- 大概详情 -->
+<view class='price'>
+  <view class='priciLi'>
+    <view class='detail' wx:if="{{buildings.type == 2}}">{{buildings.money}}元/月</view>
+    <view class='detail' wx:else>{{buildings.money}}万</view>
+    <view class='co' wx:if="{{buildings.type == 2}}">租金</view> 
+    <view class='co' wx:else>售价</view> 
+  </view>
+
+  <view class='priciLi'>
+    <view class='detail'>{{buildings.layout}}</view>
+    <view class='co' wx:if="{{buildings.type == 0}}">房型</view>
+    <view class='co' wx:if="{{buildings.type == 1}}">房型</view>
+    <view class='co' wx:if="{{buildings.type == 2}}">房型</view>
+  </view>
+
+  <view class='priciLi'>
+    <view class='detail'>{{buildings.housingArea}}㎡</view>
+    <view class='co'>建筑面积</view>
+  </view>
+</view>
+
+<!-- 具体详情 -->
+<view class='xiangqing'>
+  <view class='xiangqingLi' wx:if="{{buildings.type !== 2}}">
+    <view class='xqtitle'>单价:</view> {{buildings.price}}元/㎡
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>挂牌:</view> {{time}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>朝向:</view> {{buildings.orientation==null || buildings.orientation==''?'暂无数据':buildings.orientation}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>楼层:</view> {{buildings.louceng==null || buildings.louceng==''?'暂无数据':buildings.louceng}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>电梯:</view> {{buildings.dianti==null || buildings.dianti==''?'暂无数据':buildings.dianti}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>装修:</view> {{buildings.zhaungxiu==null || buildings.zhaungxiu==''?'暂无数据':buildings.zhaungxiu}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>年代:</view> {{buildings.niandai==null || buildings.niandai==''?'暂无数据':buildings.niandai}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>房产证:</view> {{buildings.fangchan==null || buildings.fangchan==''?'暂无数据':buildings.fangchan}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>房产证号:</view> {{buildings.fanghao==null || buildings.fanghao==''?'暂无数据':buildings.fanghao}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>产权年限:</view> {{buildings.nianxian==null || buildings.nianxian==''?'暂无数据':buildings.nianxian}}
+  </view>
+
+  <view class='xiangqingLi'>
+    <view class='xqtitle'>唯一住房:</view> {{buildings.weiyi==null || buildings.weiyi==''?'暂无数据':buildings.weiyi}}
+  </view>
+</view>
+
+
+
+
+<!-- 推荐经纪人 -->
+<view class='Agent'>
+  <view class='AgentTile'>推荐经纪人</view>
+  <view class='AgentCont'>
+    <block wx:for='{{brokerList}}' wx:key='{{index}}'>
+      <view class='AgentLi'>
+        <image src="{{item.photo == null || item.photo=='' ? '../../images/touxiang2.png' : '{{url}}{{item.photo}}'}}"></image>
+        <view class='AgentDetail'>
+          <view class='person'>{{item.name}}</view>
+          <view class='meto'>{{item.mingyan}}</view>
+        </view>
+        <view class='dianhua' bindtap='kefu' data-phone='{{item.phone}}'>
+          <image src='../../images/icons/dianhua.png' class='lianxi' style='height:80rpx;width:80rpx;'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class='zhanwei'></view>
+<!-- 位置 -->
+<view class='weizhi'>
+  <view class='weititle'>楼盘位置</view>
+</view>
+<map id="map" longitude="{{buildings.lon}}" latitude="{{buildings.lat}}" scale="14" controls="{{controls}}" markers="{{markers}}"  style="width: 100%; height: 460rpx;"></map>
+
+<!-- 房源介绍 -->
+<view class='jss'>
+  <view class='weititle'>房源介绍</view>
+  <view class='jieshaoCont'>
+    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{buildings.content}}</text>
+  </view>
+</view>
+
+<!-- 同小区房源 -->
+<view class='fujn'  wx:if='{{buildings.type==0 || buildings.type==1 || buildings.type==2}}' >
+  <view class='fujinTitle'>
+    <view class='nearby'>同小区房源</view>
+    <view class='fujinMore' bindtap='houseList' data-index='10' data-houseid='{{buildings.houseId}}'>查看更多</view>
+  </view>
+
+  <view class='funjinList'>
+    <block wx:for='{{tongyuanList}}' wx:key='{{index}}'>
+      <view class='fujinli' data-id='{{item.id}}' bindtap='tongyuan'>
+        <image src='{{url}}{{item.mainImg}}'></image>
+        <view class='xiaoqu'>{{item.houseName}}/{{item.housingArea}}㎡/南</view>
+        <view class='jieshao'>
+          <view class='fujs'>{{item.layout}}</view>
+          <view class='fumoney' wx:if="{{item.type == 2}}">{{item.money}}元/月</view>
+          <view class='fumoney' wx:else>{{item.price}}元/㎡</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

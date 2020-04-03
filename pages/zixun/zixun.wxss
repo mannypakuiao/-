@@ -1,0 +1,28 @@
+page{
+  background: rgb(238, 238, 238);
+  font-size: 36rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.news{
+  position: relative;
+  margin: 30rpx 20rpx;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  height: 180rpx
+}
+.date{
+  position: absolute;
+  right: 20rpx;
+  padding-top: 20rpx;
+  bottom: 20rpx;
+  color: #BCBCBC
+}
+.bot{
+  display: none;
+  font-size: 26rpx;
+  color: rgb(190, 190, 190);
+  text-align: center;
+}

@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/person/person",
+    "pages/logs/logs",
+    "pages/houseList/houseList",
+    "pages/houseDetails/houseDetails",
+    "pages/calculatorone/calculatorone",
+    "pages/myhouse/myhouse",
+    "pages/aboutme/aboutme",
+    "pages/notice/notice",
+    "pages/noticedetail/noticedetail",
+    "pages/entrust/entrust",
+    "pages/feedback/feedback",
+    "pages/contract/contract",
+    "pages/contractlist/contractlist",
+    "pages/contractdetails/contractdetails",
+    "pages/loan/loan",
+    "pages/service/service",
+    "pages/zufangList/zufangList",
+    "pages/changfangList/changfangList",
+    "pages/myguanzhu/myguanzhu",
+    "pages/detail/detail",
+    "pages/city/city",
+    "pages/zixun/zixun"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "优居房产",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否允许"
+    }
+  },
+  "tabBar": {
+    "color": "#2cacd9",
+    "selectedColor": "#2cacd9",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/2.png",
+        "selectedIconPath": "images/tabbar/1.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "images/tabbar/3.png",
+        "selectedIconPath": "images/tabbar/4.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

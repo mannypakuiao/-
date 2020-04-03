@@ -1,0 +1,243 @@
+.search{
+  margin-top: 5%;
+  display: flex;
+}
+/* .aa{
+  overflow: hidden;
+  position: fixed;
+  height: 107px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(238, 238, 238);
+} */
+.search input{
+  margin: 5px auto;
+  width: 90%;
+  height: 80rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  border: 1px solid rgb(189, 189, 189);
+  padding-left: 10%;
+}
+.search image{
+  position: absolute;
+  left: 7%;
+  top: 61rpx;
+  width: 52rpx;
+  height: 52rpx;   
+}
+.houseType{
+  display: flex;
+  justify-content: space-around;
+  /* margin-bottom: 20rpx; */
+  padding: 20rpx 50rpx 0rpx 0rpx;
+  height: 80rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  overflow: hidden;
+}
+.houseMode{
+  text-align: center;
+  box-sizing: border-box;
+  width: 30%;
+}
+.houseMode image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.active{
+  color: rgb(58, 134, 233)
+}
+
+/* 猜你喜欢 */
+.likes{
+  padding: 20rpx;
+  margin-top: -40rpx;
+}
+.likeList{
+  position: relative;
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  overflow: hidden;
+  /* padding-bottom: 66rpx; */
+}
+.likeLi{
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  margin-top: 40rpx;
+  padding-bottom: 46rpx;
+}
+.img{
+  width: 30%;
+  overflow: hidden;
+  height: 200rpx;
+  float: left;
+}
+.img image{
+  height: 200rpx;
+}
+.likeCont{
+  float: right;
+  width: 67%;
+  margin-left: 3%;
+}
+.fangTitle{
+  height: 104rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 36rpx;
+}
+.xiangxiLeft{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 33rpx;
+  color: rgb(189, 189, 189);
+}
+.price{
+  color: rgb(255, 169, 10);
+  font-size: 36rpx;
+}
+.price span{
+  display: inline-block;
+  margin-left: 40rpx;
+  font-size: 1px;
+  color: rgb(189, 189, 189);
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+
+/* 房型选择 */
+.houseList{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 235rpx;
+  background: #fff;
+  z-index: 99999;
+  min-height: 290rpx;
+}
+.zhezhao{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: black;
+  opacity: 0.6;
+  height: 80%;
+  width:100%;
+}
+.cont{
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+.fangxing{
+  color: rgb(102, 102, 102);
+  float: left;
+  margin-left: 6.5%;
+  width: 25%;
+  margin-top: 20rpx;
+  text-align: center;
+  background: rgba(199, 199, 199, 0.404);
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+}
+.botn{
+  overflow: hidden;
+  border-top: 1px solid rgba(199, 199, 199, 0.404);
+  display: flex;
+  justify-content: space-around;
+}
+.botn button{
+  font-size: 30rpx;
+  padding: 0rpx 120rpx 0rpx 120rpx;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.b1{
+  color: black;
+}
+.b2{
+  background: rgb(15, 65, 173);
+  color: #fff;
+}
+.fxactive{
+  color: rgb(58, 134, 233)
+}
+.qujian{
+  margin: 20rpx 6.5% 0rpx 6.5% ; 
+  display: flex;
+  justify-content: space-around;
+}
+.qujian input{
+  line-height: 28px;
+  font-size: 26rpx;
+  text-align: center;
+  border: 1px solid rgb(224, 224, 224);
+}
+.jiage{
+  font-size: 26rpx;
+}
+.conts{
+  background:  rgb(238, 238, 238);
+}
+.quyu{
+  text-align: center;
+  font-size: 34rpx;
+  padding-left: 5%;
+  height: 80rpx;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  line-height: 80rpx;
+}
+.type{
+  position: relative;
+  font-size: 34rpx;
+}
+.houseMode image{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -23rpx;
+}
+.typetitle{
+  width: 140rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 29rpx;
+}
+.shuju{
+  display: inline-block;
+  width: 140rpx;
+  height: 45rpx;
+  font-size: 32rpx;
+  margin: 28rpx auto;
+  color: rgb(190, 189, 189);
+}
+form{
+  width: 100%;
+}
+.mon{
+  float: left;
+}
+.juli{
+  float: right;
+  font-size: 26rpx;
+  color: rgb(189, 189, 189);
+  margin-top: 10rpx;
+}

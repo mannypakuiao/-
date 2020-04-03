@@ -1,0 +1,138 @@
+<view class='aa'>
+  <view class='search'>
+    <form bindsubmit="searchSubmit">
+      <image src='../../images/icons/sousuo.png'></image>
+      <input placeholder='搜索小区' bindconfirm='searchSubmit' name='xiaoquming'></input>
+    </form>
+  </view>
+
+  <view class='houseType'>
+    <block wx:for='{{list}}' wx:key='{{index}}'>
+      <view class="houseMode {{typeIndex==index ? 'active':''}}" bindtap='nav' data-index='{{index}}'>
+        <view class='type'>
+          <view class='typetitle'>
+            {{item.title}}
+          </view>
+          <image src='{{item.img}}'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class='likeList'>
+  <scroll-view scroll-y='true'  class="yscroll_bar" bindscrolltolower="loadMore" style='height:{{windowHeight}}px'>
+    <block wx:for='{{likeLi}}' wx:key='{{index}}'>
+      <view class='likeLi' bindtap='houseDetails' data-id='{{item.id}}' data-type='{{item.type}}'>
+        <view class='img'>   
+          <image src='{{url}}{{item.mainImg}}'></image>
+        </view>
+
+        <view class='likeCont'>
+          <view class='fangTitle'>{{item.title}}</view>
+          <view class='xiangxi'>
+            <view class='xiangxiLeft'>
+              {{item.housingArea}}平米|{{item.layout}}|{{item.orientation}}|{{item.houseName}}
+            </view>
+
+            <view class='price'>
+              <view class='mon' wx:if="{{item.type == 2}}">{{item.money}}元/月</view>
+              <view class='mon' wx:else>{{item.price}}元/㎡</view>
+              <view class='juli' style="{{juli ? 'display:block':'display:none'}}">距我有:{{item.distance}}km</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='shuju' style="{{shuju ? 'display:block':'display:none'}}">暂无数据</view>
+  </scroll-view>
+</view>
+
+
+
+<!-- 区域 -->
+<view class="houseList" style="{{diqushow ? 'display:block':'display:none'}}">
+  <view class='nozhezhao'>
+    <view class='conts'>
+      <scroll-view scroll-y='true' style="height: 200px;" >
+        <block wx:for='{{quyus}}' wx:key='{{index}}'>
+          <view class="quyu {{quyuindex == index? 'fxactive':''}}" bindtap='quyu' data-index='{{index}}' data-code='{{item.code}}'  data-item='{{item.name}}'>
+            {{item.name}}
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+
+    <view class='botn'>
+      <button class='b1' bindtap='chongzhi1'>重置</button>
+      <button class='b2' data-pagenumber='1' data-housetype='1'  bindtap='housetype'>确定</button>
+    </view>
+  </view>
+</view>
+
+<!-- 房型选择 -->
+<view class="houseList" style="{{qyshow ? 'display:block':'display:none'}}">
+  <view class='nozhezhao'>
+    <view class='cont'>
+      <block wx:for='{{fangxings}}' wx:key='{{index}}'>
+        <view class="fangxing {{fangxingindex == index? 'fxactive':''}}" bindtap='fangxing' data-index='{{index}}' data-item='{{item}}'>
+          {{item}}
+        </view>
+      </block>
+    </view>
+
+    <view class='botn'>
+      <button class='b1' bindtap='chongzhi2'>重置</button>
+      <button class='b2' data-pagenumber='1'  data-housetype='2' bindtap='housetype'>确定</button>
+    </view>
+  </view>
+</view>
+
+<!-- 面积 -->
+<view class="houseList" style="{{mianshow ? 'display:block':'display:none'}}">
+  <view class='nozhezhao'>
+    <view class='cont'>
+      <block wx:for='{{mianji}}' wx:key='{{index}}'>
+        <view class="fangxing {{mianjiindex == index? 'fxactive':''}}" bindtap='mianji' data-index='{{index}}' data-item='{{item}}'>
+          {{item}}
+        </view>
+      </block>
+    </view>
+
+    <view class='btn'>
+      <view class='botn'>
+        <button class='b1' bindtap='chongzhi3'>重置</button>
+        <button class='b2' data-pagenumber='1'  data-housetype='3' bindtap='housetype'>确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 售价 -->
+<view class="houseList" style="{{shoujiashow ? 'display:block':'display:none'}}">
+  <form bindsubmit='formSubmit'>
+    <view class='nozhezhao'>
+      <view class='cont'>
+        <view class='qujian'>
+          <input placeholder='最低价格' placeholder-class='jiage' type='text' name='minprice' type="digit" value="{{value}}" ></input>-
+          <input placeholder='最高价格' placeholder-class='jiage' type='text' name='maxprice' type="digit" value="{{value}}" ></input>
+        </view>
+        <block wx:for='{{shoujia}}' wx:key='{{index}}'>
+          <view class="fangxing {{shoujiaindex == index? 'fxactive':''}}" bindtap='shoujia' data-index='{{index}}' data-item='{{item}}'>
+            {{item}}
+          </view>
+        </block>
+      </view>
+
+      <view class='btn'>
+        <view class='botn'>
+          <button class='b1' bindtap='chongzhi4'>重置</button>
+          <button class='b2' data-pagenumber='1' data-housetype='4' bindtap='housetype' form-type='submit'>确定</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>
+
+<!-- 遮罩层 -->
+<view class='zhezhao' style="{{zhezhaoshow ? 'display:block':'display:none'}}"></view>
